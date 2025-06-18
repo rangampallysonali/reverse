@@ -1,0 +1,19 @@
+pipeline {
+    agent {
+        docker{
+            image: 'openjdk:17'
+        }
+    }
+    stages {
+        stage('Compile') {
+            steps {
+                sh 'javac reverse.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                sh 'java reverse.java'
+            }
+        }
+    }
+}
