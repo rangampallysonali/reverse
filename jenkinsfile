@@ -1,7 +1,7 @@
 pipeline {
     agent {
-        docker{
-            image: 'openjdk:17'
+        docker {
+            image 'openjdk:17'
         }
     }
     stages {
@@ -12,7 +12,11 @@ pipeline {
         }
         stage('Run') {
             steps {
+<<<<<<< HEAD
                 sh 'java Example'
+=======
+                sh 'java reverse'
+>>>>>>> d0e8317d575a28bca389340cca15875077ef4b93
             }
         }
     }
