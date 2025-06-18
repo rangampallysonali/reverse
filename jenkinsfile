@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh 'javac reverse.java'
+                sh 'javac Example.java'
             }
         }
         stage('Run') {
             steps {
-                sh 'java reverse.java'
+                sh 'java Example'
             }
         }
     }
